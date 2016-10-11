@@ -50,7 +50,7 @@ namespace ZenithSociety.Models
     {
         [Required]
         [Display(Name = "Username")]
-        public string Username { get; set; }
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -66,7 +66,7 @@ namespace ZenithSociety.Models
 
         [Required]
         [Display(Name = "Username")]
-        public string Username { get; set; }
+        public string UserName { get; set; }
 
         [Required]
         [EmailAddress]
@@ -86,11 +86,11 @@ namespace ZenithSociety.Models
 
         [Required]
         [Display(Name = "First Name")]
-        public string first_name { get; set; }
+        public string FirstName { get; set; }
 
         [Required]
         [Display(Name = "Last Name")]
-        public string last_name { get; set; }
+        public string LastName { get; set; }
     }
 
     public class ResetPasswordViewModel
