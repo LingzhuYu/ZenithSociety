@@ -9,7 +9,7 @@ namespace ZenithDataLib.Models
 {
     public class ZenithSocietyContext : DbContext
     {
-        public DbSet<Activity> Cities { get; set; }
-        public DbSet<Event> Provinces { get; set; }
+        public DbSet<Activity> Activities { get; set; }
+        public DbSet<Event> Events { get; set; }
     }
 }
