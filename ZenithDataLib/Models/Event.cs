@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ZenithSociety.Models;
 
 namespace ZenithDataLib.Models
 {
@@ -15,14 +16,14 @@ namespace ZenithDataLib.Models
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
 
+        //Creates FK 
         public string UserName { get; set; }
-        //[ForeignKey("UserName")]
-        //public ApplicationUser ApplicationUser { get; set; }
+        [ForeignKey("UserName")]
+        public virtual ApplicationUser User { get; set; }
 
         public Activity Activity { get; set; }
         public DateTime CreationDate { get; set; }
         public Boolean IsActive { get; set; }
-
-        
+   
     }
 }

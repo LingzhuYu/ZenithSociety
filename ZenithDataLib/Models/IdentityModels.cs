@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
+using ZenithDataLib.Models;
+using System.Collections.Generic;
 
 namespace ZenithSociety.Models
 {
@@ -20,6 +22,8 @@ namespace ZenithSociety.Models
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        public virtual ICollection<Event> Events { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
