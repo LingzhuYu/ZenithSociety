@@ -12,8 +12,12 @@ namespace ZenithDataLib.Models
         [Key]
         public int ActivityId { get; set; }
 
+        [Display(Name = "Activity Description")]
         public string ActivityDescription { get; set; }
 
+        [Display(Name = "Creation Date")]
         public DateTime CreationDate { get;  set;}
+
+        public List<Event> Events { get; set; }
     }
 }

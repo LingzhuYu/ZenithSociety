@@ -37,5 +37,8 @@ namespace ZenithSociety.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<ZenithDataLib.Models.Event> Events { get; set; }
+        public DbSet<ZenithDataLib.Models.Activity> Activities { get; set; }
     }
 }
