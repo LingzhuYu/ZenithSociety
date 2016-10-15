@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web.Mvc;
 using ZenithSociety.Models;
 
 namespace ZenithDataLib.Models
@@ -13,17 +9,31 @@ namespace ZenithDataLib.Models
     {
         [Key]
         public int EventId { get; set; }
+
+        [Required]
+        [Display(Name = "Start Date")]
         public DateTime StartDate { get; set; }
+
+        [Required]
+        [Display(Name = "End Date")]
         public DateTime EndDate { get; set; }
 
-        //Creates FK 
-        public string UserName { get; set; }
-        [ForeignKey("UserName")]
-        public virtual ApplicationUser User { get; set; }
+        ////Creates FK 
+        [Display(Name = "Created By")]
+        [ScaffoldColumn(false)]
+        public string Id { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
-        public Activity Activity { get; set; }
+        [Display(Name = "Creation Date")]
+        [ScaffoldColumn(false)]
         public DateTime CreationDate { get; set; }
+
+        [Display(Name = "Is Active")]
         public Boolean IsActive { get; set; }
-   
+
+        [Display(Name = "Activity Decription")]
+        public int  ActivityId { get; set; }
+        public Activity Activity { get; set; }
+
     }
 }
