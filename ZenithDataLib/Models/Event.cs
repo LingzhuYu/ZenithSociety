@@ -10,15 +10,17 @@ namespace ZenithDataLib.Models
         [Key]
         public int EventId { get; set; }
 
+        [Required]
         [Display(Name = "Start Date")]
         public DateTime StartDate { get; set; }
 
+        [Required]
         [Display(Name = "End Date")]
         public DateTime EndDate { get; set; }
 
         ////Creates FK 
         [Display(Name = "Created By")]
-        [HiddenInput(DisplayValue = false)]
+        [ScaffoldColumn(false)]
         public string Id { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
 

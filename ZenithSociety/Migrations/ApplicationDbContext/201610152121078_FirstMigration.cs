@@ -12,7 +12,7 @@ namespace ZenithSociety.Migrations.ApplicationDbContext
                 c => new
                     {
                         ActivityId = c.Int(nullable: false, identity: true),
-                        ActivityDescription = c.String(),
+                        ActivityDescription = c.String(nullable: false),
                         CreationDate = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.ActivityId);

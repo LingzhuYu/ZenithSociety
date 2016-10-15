@@ -54,6 +54,7 @@ namespace ZenithSociety.Controllers
         {
             if (ModelState.IsValid)
             {
+                @event.CreationDate = DateTime.Now;
                 db.Events.Add(@event);
                 db.SaveChanges();
                 return RedirectToAction("Index");
