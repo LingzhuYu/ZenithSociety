@@ -20,6 +20,9 @@ namespace ZenithSociety.Models
             return userIdentity;
         }
 
+        //Identity Models has a UserName by default but we are overriding to put it just under Id in
+        //the column list for easier scaffolding
+        public override string UserName {get; set;}
         public string FirstName { get; set; }
         public string LastName { get; set; }
 

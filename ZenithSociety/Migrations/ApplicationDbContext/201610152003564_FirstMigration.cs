@@ -40,6 +40,7 @@ namespace ZenithSociety.Migrations.ApplicationDbContext
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
+                        UserName = c.String(nullable: false, maxLength: 256),
                         FirstName = c.String(),
                         LastName = c.String(),
                         Email = c.String(maxLength: 256),
@@ -52,7 +53,6 @@ namespace ZenithSociety.Migrations.ApplicationDbContext
                         LockoutEndDateUtc = c.DateTime(),
                         LockoutEnabled = c.Boolean(nullable: false),
                         AccessFailedCount = c.Int(nullable: false),
-                        UserName = c.String(nullable: false, maxLength: 256),
                     })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.UserName, unique: true, name: "UserNameIndex");

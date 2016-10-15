@@ -16,6 +16,7 @@ namespace ZenithDataLib.Models
         public string ActivityDescription { get; set; }
 
         [Display(Name = "Creation Date")]
+        [ScaffoldColumn(false)]
         public DateTime CreationDate { get;  set;}
 
         public List<Event> Events { get; set; }

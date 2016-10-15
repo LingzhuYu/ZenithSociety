@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web.Mvc;
 using ZenithSociety.Models;
 
 namespace ZenithDataLib.Models
@@ -22,6 +18,7 @@ namespace ZenithDataLib.Models
 
         ////Creates FK 
         [Display(Name = "Created By")]
+        [HiddenInput(DisplayValue = false)]
         public string Id { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
 
@@ -29,7 +26,7 @@ namespace ZenithDataLib.Models
         [ScaffoldColumn(false)]
         public DateTime CreationDate { get; set; }
 
-        [Display(Name = "Is Activity")]
+        [Display(Name = "Is Active")]
         public Boolean IsActive { get; set; }
 
         [Display(Name = "Activity Decription")]
