@@ -31,7 +31,14 @@ namespace ZenithSociety.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
+            //Gets Activity Id from db and places it in @event
+            var eventList = db.Events.Include(m => m.Activity);
+            var currentEvent = eventList.Where(m => m.EventId == id).First();
+
             Event @event = db.Events.Find(id);
+            @event.ActivityId = currentEvent.ActivityId;
+
             if (@event == null)
             {
                 return HttpNotFound();
@@ -110,7 +117,14 @@ namespace ZenithSociety.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
+            //Gets Activity Id from db and places it in @event
+            var eventList = db.Events.Include(m => m.Activity);
+            var currentEvent = eventList.Where(m => m.EventId == id).First();
+
             Event @event = db.Events.Find(id);
+            @event.ActivityId = currentEvent.ActivityId;
+
             if (@event == null)
             {
                 return HttpNotFound();
