@@ -13,7 +13,7 @@ namespace ZenithSociety.Migrations.ApplicationDbContext
         
         string IMigrationMetadata.Id
         {
-            get { return "201610152121078_FirstMigration"; }
+            get { return "201610181512125_FirstMigration"; }
         }
         
         string IMigrationMetadata.Source

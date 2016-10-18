@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ZenithDataLib.Models.Event>
+
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Show</h2>
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @String.Format(ViewBag.DateFormat, item.StartDate)
+            <td>
+                @String.Format(ViewBag.TimeFormat, item.StartDate) - @String.Format(ViewBag.TimeFormat, item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Activity.ActivityDescription)
+            </td>
+        </tr>
+    }
+
+</table>

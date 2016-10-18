@@ -188,9 +188,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\ApplicationDbContext\201610152121078_FirstMigration.cs" />
-    <Compile Include="Migrations\ApplicationDbContext\201610152121078_FirstMigration.Designer.cs">
-      <DependentUpon>201610152121078_FirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\ApplicationDbContext\201610181512125_FirstMigration.cs" />
+    <Compile Include="Migrations\ApplicationDbContext\201610181512125_FirstMigration.Designer.cs">
+      <DependentUpon>201610181512125_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ApplicationDbContext\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -264,6 +264,7 @@
     <Content Include="Views\Activities\Details.cshtml" />
     <Content Include="Views\Activities\Edit.cshtml" />
     <Content Include="Views\Activities\Index.cshtml" />
+    <Content Include="Views\Home\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ZenithDataLib\ZenithDataLib.csproj">
@@ -283,8 +284,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\ApplicationDbContext\201610152121078_FirstMigration.resx">
-      <DependentUpon>201610152121078_FirstMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ApplicationDbContext\201610181512125_FirstMigration.resx">
+      <DependentUpon>201610181512125_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
