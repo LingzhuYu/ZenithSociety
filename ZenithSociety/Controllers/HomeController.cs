@@ -42,7 +42,7 @@ namespace ZenithSociety.Controllers
             events.OrderByDescending(d => d.StartDate);
 
             ViewBag.DateFormat = "{0:dddd MMMM dd, yyyy}";
-            ViewBag.TimeFormat = "{0:hh:mm tt}";
+            ViewBag.TimeFormat = "{0:h:mm tt}";
 
             return View(events.ToList());
         }

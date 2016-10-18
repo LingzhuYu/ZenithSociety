@@ -2,16 +2,39 @@
 
 @{
     ViewBag.Title = "Show";
+    var currentDate = "";
 }
 
 <h2>Show</h2>
 
-<table class="table">
+<table border="1">
 
     @foreach (var item in Model)
     {
+        //Initializes currentDate to the first date and generates the first <tr>
+        if (currentDate == "")
+        {
+            currentDate = @String.Format(ViewBag.DateFormat, item.StartDate);
+            <tr>
+                <td colspan="2" style= "background-color: red">
+                    @String.Format(ViewBag.DateFormat, item.StartDate)
+                </td>
+            </tr>
+        }
+
+        //DateTimes within the same day gets grouped together in same <tr>
+        if (currentDate != @String.Format(ViewBag.DateFormat, item.StartDate))
+        {
+            currentDate = @String.Format(ViewBag.DateFormat, item.StartDate);
+
+            <tr>
+                <td colspan="2" style= "background-color: red">
+                    @String.Format(ViewBag.DateFormat, item.StartDate)
+                </td>
+            </tr>
+        }
+
         <tr>
-            @String.Format(ViewBag.DateFormat, item.StartDate)
             <td>
                 @String.Format(ViewBag.TimeFormat, item.StartDate) - @String.Format(ViewBag.TimeFormat, item.EndDate)
             </td>

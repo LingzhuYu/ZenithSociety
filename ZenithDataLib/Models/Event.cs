@@ -12,11 +12,13 @@ namespace ZenithDataLib.Models
         public int EventId { get; set; }
 
         [Required]
-        [Display(Name = "Start Date")]
+        [Display(Name = "Start Date & Time")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM'/'dd'/'yyyy hh:mm tt}")]
         public DateTime StartDate { get; set; }
 
         [Required]
-        [Display(Name = "End Date")]
+        [Display(Name = "End Date & Time")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM'/'dd'/'yyyy hh:mm tt}")]
         public DateTime EndDate { get; set; }
 
         ////Creates FK 
@@ -42,7 +44,7 @@ namespace ZenithDataLib.Models
             if (EndDate < StartDate)
             {
                 yield return
-                  new ValidationResult(errorMessage: "EndDate must be greater than StartDate",
+                  new ValidationResult(errorMessage: "End Date & Time must be greater than Start Date & Time",
                                        memberNames: new[] { "EndDate" });
             }
         }

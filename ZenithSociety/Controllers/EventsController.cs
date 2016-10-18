@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using ZenithDataLib.Models;
 using ZenithSociety.Models;
+using System.Data.Entity.Migrations;
 
 namespace ZenithSociety.Controllers
 {
@@ -99,9 +100,13 @@ namespace ZenithSociety.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "EventId,StartDate,EndDate,Id,CreationDate,IsActive,ActivityId")] Event @event)
         {
+            @event.CreationDate = Convert.ToDateTime(String.Format("{0:MM'/'dd'/'yyyy hh:mm tt}", db.Events.Find(@event.EventId).CreationDate));
+            @event.Id = db.Events.Find(@event.EventId).Id;
+
             if (ModelState.IsValid)
             {
-                db.Entry(@event).State = EntityState.Modified;
+                //db.Entry(@event).State = EntityState.Modified;
+                db.Events.AddOrUpdate(@event);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
