@@ -190,7 +190,7 @@ namespace ZenithSociety.Migrations.ApplicationDbContext
                 },
                 new Event
                 {
-                    StartDate = Convert.ToDateTime("2016/10/01 10:30 pm"),
+                    StartDate = Convert.ToDateTime("2016/10/01 10:30 am"),
                     EndDate = Convert.ToDateTime("2016/10/01 12:30 pm"),
                     Id = dummyId,
                     Activity = db.Activities.First(a => a.ActivityDescription == "Youth choir practice"),
@@ -199,8 +199,8 @@ namespace ZenithSociety.Migrations.ApplicationDbContext
                 },
                 new Event
                 {
-                    StartDate = Convert.ToDateTime("2016/10/01 12:30 pm"),
-                    EndDate = Convert.ToDateTime("2016/10/01 10:30 am"),
+                    StartDate = Convert.ToDateTime("2016/10/01 12:00 pm"),
+                    EndDate = Convert.ToDateTime("2016/10/01 1:30 pm"),
                     Id = dummyId,
                     Activity = db.Activities.First(a => a.ActivityDescription == "Lunch"),
                     CreationDate = Convert.ToDateTime("2016/09/10"),
@@ -244,7 +244,7 @@ namespace ZenithSociety.Migrations.ApplicationDbContext
                 },
                 new Event
                 {
-                    StartDate = Convert.ToDateTime("2016/10/02 12:00 am"),
+                    StartDate = Convert.ToDateTime("2016/10/02 12:00 pm"),
                     EndDate = Convert.ToDateTime("2016/10/02 1:00 pm"),
                     Id = dummyId,
                     Activity = db.Activities.First(a => a.ActivityDescription == "BBQ Lunch"),
