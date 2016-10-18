@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using ZenithSociety.Models;
 
 namespace ZenithDataLib.Models
 {
-    public class Event
+    public class Event: IValidatableObject
     {
         [Key]
         public int EventId { get; set; }
@@ -35,5 +36,15 @@ namespace ZenithDataLib.Models
         public int  ActivityId { get; set; }
         public Activity Activity { get; set; }
 
+        //Checks if EndDate is later than StartDate
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (EndDate < StartDate)
+            {
+                yield return
+                  new ValidationResult(errorMessage: "EndDate must be greater than StartDate",
+                                       memberNames: new[] { "EndDate" });
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -55,6 +56,7 @@ namespace ZenithSociety.Controllers
             if (ModelState.IsValid)
             {
                 @event.CreationDate = DateTime.Now;
+                @event.Id = User.Identity.GetUserId();
                 db.Events.Add(@event);
                 db.SaveChanges();
                 return RedirectToAction("Index");
