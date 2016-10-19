@@ -16,38 +16,44 @@ namespace ZenithSociety.Controllers
 
         public ActionResult Index()
         {
-            var events = db.Events.Include(m => m.Activity).Include(n => n.ApplicationUser);
-            events.OrderByDescending(d => d.StartDate);
-
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        //Now displays events pertaining to this week only
-        public ActionResult Show()
-        {
             var mondayOfTheWeek = getMondayOfTheWeek();
 
-            var events = db.Events.Include(m => m.Activity).Include(n => n.ApplicationUser);
+            var events = db.Events.Include(m => m.Activity).Include(n => n.ApplicationUser)
+                           .Where(p => p.IsActive == true);
 
             ViewBag.DateFormat = "{0:dddd MMMM dd, yyyy}";
             ViewBag.TimeFormat = "{0:h:mm tt}";
 
-            return View(events.ToList().Where(d => (d.StartDate >= mondayOfTheWeek) && (d.EndDate <= mondayOfTheWeek.AddDays(7))).OrderBy(d => d.StartDate));
+            return View(events.ToList().Where(d => (d.StartDate >= mondayOfTheWeek) && (d.EndDate <= mondayOfTheWeek.AddDays(7)))
+                        .OrderBy(d => d.StartDate));
         }
+
+        //public ActionResult About()
+        //{
+        //    ViewBag.Message = "Your application description page.";
+
+        //    return View();
+        //}
+
+        //public ActionResult Contact()
+        //{
+        //    ViewBag.Message = "Your contact page.";
+
+        //    return View();
+        //}
+
+        ////Now displays events pertaining to this week only
+        //public ActionResult Show()
+        //{
+        //    var mondayOfTheWeek = getMondayOfTheWeek();
+
+        //    var events = db.Events.Include(m => m.Activity).Include(n => n.ApplicationUser).Where(p => p.IsActive == true);
+
+        //    ViewBag.DateFormat = "{0:dddd MMMM dd, yyyy}";
+        //    ViewBag.TimeFormat = "{0:h:mm tt}";
+
+        //    return View(events.ToList().Where(d => (d.StartDate >= mondayOfTheWeek) && (d.EndDate <= mondayOfTheWeek.AddDays(7))).OrderBy(d => d.StartDate));
+        //}
 
         //Gets the monday of this week using DateTime.Now as basis
         private DateTime getMondayOfTheWeek()

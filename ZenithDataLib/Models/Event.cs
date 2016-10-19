@@ -28,7 +28,7 @@ namespace ZenithDataLib.Models
         public virtual ApplicationUser ApplicationUser { get; set; }
 
         [Display(Name = "Creation Date")]
-        [ScaffoldColumn(false)]
+        [DisplayFormat(DataFormatString = "{0:MM'/'dd'/'yyyy hh:mm tt}")]
         public DateTime CreationDate { get; set; }
 
         [Display(Name = "Is Active")]
@@ -38,13 +38,20 @@ namespace ZenithDataLib.Models
         public int  ActivityId { get; set; }
         public Activity Activity { get; set; }
 
-        //Checks if EndDate is later than StartDate
+        //Checks if EndDate is later than StartDate and if Event happens in same day
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             if (EndDate < StartDate)
             {
                 yield return
                   new ValidationResult(errorMessage: "End Date & Time must be greater than Start Date & Time",
+                                       memberNames: new[] { "EndDate" });
+            }
+
+            if (EndDate.Date != StartDate.Date)
+            {
+                yield return
+                  new ValidationResult(errorMessage: "Event Start Date and End Date must occur on the same day",
                                        memberNames: new[] { "EndDate" });
             }
         }

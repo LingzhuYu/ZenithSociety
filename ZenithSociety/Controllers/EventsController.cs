@@ -3,17 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ZenithDataLib.Models;
 using ZenithSociety.Models;
-using System.Data.Entity.Migrations;
 
 namespace ZenithSociety.Controllers
 {
-    [Authorize(Roles = "Admin")]
     public class EventsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -33,7 +32,7 @@ namespace ZenithSociety.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            //Gets Activity Id from db and places it in @event
+
             var eventList = db.Events.Include(m => m.Activity);
             var currentEvent = eventList.Where(m => m.EventId == id).First();
 
