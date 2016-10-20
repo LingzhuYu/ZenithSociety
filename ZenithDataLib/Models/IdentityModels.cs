@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using ZenithDataLib.Models;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ZenithSociety.Models
 {
@@ -22,6 +23,7 @@ namespace ZenithSociety.Models
 
         //Identity Models has a UserName by default but we are overriding to put it just under Id in
         //the column list for easier scaffolding
+        [Display(Name = "Created By")]
         public override string UserName {get; set;}
         public string FirstName { get; set; }
         public string LastName { get; set; }

@@ -15,6 +15,7 @@ namespace ZenithDataLib.Models
 
         [Required]
         [Display(Name = "Activity Description")]
+        [MaxLength(40, ErrorMessage = "The {0} cannot exceed {1} characters long.")]
         public string ActivityDescription { get; set; }
 
         [Display(Name = "Creation Date")]

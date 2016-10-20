@@ -66,6 +66,7 @@ namespace ZenithSociety.Models
 
         [Required]
         [Display(Name = "Username")]
+        [MaxLength(16, ErrorMessage = "The {0} cannot exceed {1} characters long.")]
         public string UserName { get; set; }
 
         [Required]
@@ -86,10 +87,12 @@ namespace ZenithSociety.Models
 
         [Required]
         [Display(Name = "First Name")]
+        [MaxLength(16, ErrorMessage = "The {0} cannot exceed {1} characters long.")]
         public string FirstName { get; set; }
 
         [Required]
         [Display(Name = "Last Name")]
+        [MaxLength(16, ErrorMessage = "The {0} cannot exceed {1} characters long.")]
         public string LastName { get; set; }
     }
 
