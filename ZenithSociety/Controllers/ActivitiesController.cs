@@ -11,6 +11,8 @@ using ZenithSociety.Models;
 
 namespace ZenithSociety.Controllers
 {
+
+    [Authorize(Roles = "Admin")]
     public class ActivitiesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

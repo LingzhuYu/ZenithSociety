@@ -1,4 +1,5 @@
 ﻿body {
+    margin-top: 35px;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -30,7 +31,6 @@ table{
 table th{
    background-color: #87e8e8;
    color: #2c4355;
-   width: 100%;
    text-align: center;
    border: solid 1px #a1c7d0;
 }

@@ -73,7 +73,7 @@ namespace ZenithSociety.Migrations.ApplicationDbContext
             List<Activity> activities = new List<Activity>();
             activities.Add(new Activity
             {
-                ActivityDescription = "Senior’s Golf Tournament",
+                ActivityDescription = "Senior's Golf Tournament",
                 CreationDate = new DateTime(2016, 10, 13, 6, 10, 0)
             });
             activities.Add(new Activity
@@ -148,7 +148,7 @@ namespace ZenithSociety.Migrations.ApplicationDbContext
                     StartDate = Convert.ToDateTime("2016/10/17 8:30 am"),
                     EndDate = Convert.ToDateTime("2016/10/17 10:30 am"),
                     Id = dummyId,
-                    Activity = db.Activities.First(a => a.ActivityDescription == "Senior’s Golf Tournament"),
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Senior's Golf Tournament"),
                     CreationDate = Convert.ToDateTime("2016/09/10"),
                     IsActive = true
                 },
@@ -258,6 +258,240 @@ namespace ZenithSociety.Migrations.ApplicationDbContext
                     Id = dummyId,
                     Activity = db.Activities.First(a => a.ActivityDescription == "Garage Sale"),
                     CreationDate = Convert.ToDateTime("2016/09/10"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/23 8:30 am"),
+                    EndDate = Convert.ToDateTime("2016/10/23 10:30 am"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Senior's Golf Tournament"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/24 8:30 am"),
+                    EndDate = Convert.ToDateTime("2016/10/24 10:30 am"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Leadership General Assembly Meeting"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/25 5:30 pm"),
+                    EndDate = Convert.ToDateTime("2016/10/25 7:15 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Youth Bowling Tournament"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/25 7:00 pm"),
+                    EndDate = Convert.ToDateTime("2016/10/25 8:00 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Young ladies cooking lessons"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/26 8:30 am"),
+                    EndDate = Convert.ToDateTime("2016/10/26 10:30 am"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Youth craft lessons"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/26 10:30 am"),
+                    EndDate = Convert.ToDateTime("2016/10/26 12:00 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Youth choir practice"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/26 12:00 pm"),
+                    EndDate = Convert.ToDateTime("2016/10/26 1:30 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Lunch"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/27 7:30 am"),
+                    EndDate = Convert.ToDateTime("2016/10/27 8:30 am"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Pancake Breakfast"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/27 8:30 am"),
+                    EndDate = Convert.ToDateTime("2016/10/27 10:30 am"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Swimming Lessons for the youth"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/28 8:30 am"),
+                    EndDate = Convert.ToDateTime("2016/10/28 10:30 am"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Swimming Exercise for parents"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/28 10:30 am"),
+                    EndDate = Convert.ToDateTime("2016/10/28 12:00 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Bingo Tournament"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/28 12:00 pm"),
+                    EndDate = Convert.ToDateTime("2016/10/28 1:00 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "BBQ Lunch"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/29 1:00 pm"),
+                    EndDate = Convert.ToDateTime("2016/10/29 6:00 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Garage Sale"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/30 8:30 am"),
+                    EndDate = Convert.ToDateTime("2016/10/30 10:30 am"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Senior's Golf Tournament"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/10/31 8:30 am"),
+                    EndDate = Convert.ToDateTime("2016/10/31 10:30 am"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Leadership General Assembly Meeting"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/11/01 5:30 pm"),
+                    EndDate = Convert.ToDateTime("2016/11/01 7:15 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Youth Bowling Tournament"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/11/01 7:00 pm"),
+                    EndDate = Convert.ToDateTime("2016/11/01 8:00 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Young ladies cooking lessons"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/11/02 8:30 am"),
+                    EndDate = Convert.ToDateTime("2016/11/02 10:30 am"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Youth craft lessons"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/11/02 10:30 am"),
+                    EndDate = Convert.ToDateTime("2016/11/02 12:00 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Youth choir practice"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/11/02 12:00 pm"),
+                    EndDate = Convert.ToDateTime("2016/11/02 1:30 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Lunch"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/11/03 7:30 am"),
+                    EndDate = Convert.ToDateTime("2016/11/03 8:30 am"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Pancake Breakfast"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/11/03 8:30 am"),
+                    EndDate = Convert.ToDateTime("2016/11/03 10:30 am"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Swimming Lessons for the youth"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/11/04 8:30 am"),
+                    EndDate = Convert.ToDateTime("2016/11/04 10:30 am"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Swimming Exercise for parents"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/11/04 10:30 am"),
+                    EndDate = Convert.ToDateTime("2016/11/04 12:00 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Bingo Tournament"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/11/04 12:00 pm"),
+                    EndDate = Convert.ToDateTime("2016/11/04 1:00 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "BBQ Lunch"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
+                    IsActive = true
+                },
+                new Event
+                {
+                    StartDate = Convert.ToDateTime("2016/11/05 1:00 pm"),
+                    EndDate = Convert.ToDateTime("2016/11/05 6:00 pm"),
+                    Id = dummyId,
+                    Activity = db.Activities.First(a => a.ActivityDescription == "Garage Sale"),
+                    CreationDate = Convert.ToDateTime("2016/10/19"),
                     IsActive = true
                 },
             };
