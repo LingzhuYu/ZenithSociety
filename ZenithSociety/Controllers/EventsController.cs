@@ -6,13 +6,14 @@ using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using ZenithDataLib.Models;
 using ZenithSociety.Models;
 
 namespace ZenithSociety.Controllers
 {
+
+    [Authorize(Roles = "Admin")]
     public class EventsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
