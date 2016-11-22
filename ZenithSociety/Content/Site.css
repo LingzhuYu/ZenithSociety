@@ -29,14 +29,14 @@ table{
 }
 
 table th{
-   background-color: #87e8e8;
+   background-color: #bce1fc;
    color: #2c4355;
    text-align: center;
-   border: solid 1px #a1c7d0;
+   border: solid 1px #a4eeff;
 }
 
 table td{
-   border: solid 1px #a1c7d0;
+   border: solid 1px #a4eeff;
    font-size: 15px;
 }
 

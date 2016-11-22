@@ -84,6 +84,8 @@ namespace ZenithSociety.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ActivityId,ActivityDescription,CreationDate")] Activity activity)
         {
+            activity.CreationDate = Convert.ToDateTime(String.Format("{0:MM'/'dd'/'yyyy hh:mm tt}", db.Events.Find(activity.ActivityId).CreationDate));
+
             if (ModelState.IsValid)
             {
                 db.Entry(activity).State = EntityState.Modified;
